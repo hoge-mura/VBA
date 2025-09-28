@@ -27,12 +27,11 @@ Excel VBA を用いた在庫管理システムです。
 
 ## 🔄 処理フロー
 
-![処理フロー図](images/flow.png)
+<img src="images/flow.png" alt="処理フロー図" width="600">
 
 ---
 
 ### 参考：Mermaidソース
-
 ```mermaid
 flowchart TD
     M[品目マスタ] --> U[在庫更新]
@@ -42,4 +41,3 @@ flowchart TD
     O --> ORD[発注リスト]
     ORD --> C[CSV保存]
     C --> CSV[CSVファイル出力]
-```
