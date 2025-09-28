@@ -30,45 +30,8 @@ Excel VBA を用いた在庫管理システムです。
 
 ```mermaid
 flowchart TD
-    subgraph Inputs[入力データ（Excelシート）]
-        M[品目マスタ\nSKU・品名・安全在庫]
-        IO[入出庫\n入/出・SKU・数量]
-        SET[設定\nB1:安全在庫既定値\nB2:出力フォルダ]
-    end
-
-    subgraph Process[処理（ボタン操作）]
-        UBTN[[在庫更新\n（入出庫を集計して最新表示）]]
-        OBTN[[発注リスト作成\n（不足品を抽出）]]
-        CBTN[[CSV保存\n（発注リストをエクスポート）]]
-    end
-
-    subgraph Sheets[計算結果（Excelシート）]
-        INV[在庫\nSKU/現在庫/安全在庫/不足数\n※不足行は薄赤で強調]
-        ORD[発注リスト\nSKU/品名/発注数]
-    end
-
-    subgraph Outputs[出力（ファイル）]
-        CSV[[UTF-8 CSV\n発注_YYYYMMDD_HHNN.csv]]
-    end
-
-    M --> UBTN
-    IO --> UBTN
-    SET --> UBTN
-    UBTN --> INV
-    INV --> OBTN
-    OBTN --> ORD
-    SET --> CBTN
-    ORD --> CBTN
-    CBTN --> CSV
-
-```mermaid
-flowchart TD
-    M[品目マスタ] --> U[在庫更新]
-    IO[入出庫] --> U
-    U --> INV[在庫シート]
-    INV --> O[発注リスト作成]
-    O --> ORD[発注リスト]
-    ORD --> C[CSV保存]
-    C --> FILE[CSVファイル出力]
-    SET[設定シート] --> U
-    SET --> C
+    A[品目マスタ] --> B[在庫更新]
+    B --> C[在庫シート]
+    C --> D[発注リスト作成]
+    D --> E[発注リスト]
+    E --> F[CSV保存]
