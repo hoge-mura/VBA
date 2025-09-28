@@ -25,7 +25,9 @@ Excel VBA を用いた在庫管理システムです。
 
 ---
 
+```markdown
 ## 🔄 処理フロー
+
 ```mermaid
 flowchart TD
     subgraph Inputs[入力データ（Excelシート）]
@@ -41,7 +43,7 @@ flowchart TD
     end
 
     subgraph Sheets[計算結果（Excelシート）]
-        INV[在庫\nSKU/現在庫/安全在庫/不足数\n※不足行は赤色で強調]
+        INV[在庫\nSKU/現在庫/安全在庫/不足数\n※不足行は薄赤で強調]
         ORD[発注リスト\nSKU/品名/発注数]
     end
 
@@ -58,7 +60,6 @@ flowchart TD
     SET --> CBTN
     ORD --> CBTN
     CBTN --> CSV
-
 
 ```mermaid
 flowchart TD
