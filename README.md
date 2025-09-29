@@ -23,6 +23,17 @@ Excel VBA を用いた在庫管理システムです。
    - 在庫更新 → 発注リスト作成 → CSV保存  
 3. `発注_YYYYMMDD_HHNN.csv` が指定フォルダに保存されます  
 
+## 💻 操作例
+
+### 在庫更新（不足品は赤で表示）
+<img src="images/stock.png" alt="在庫更新結果" width="500">
+
+### 発注リスト作成
+<img src="images/orderlist.png" alt="発注リスト" width="500">
+
+### CSV出力結果
+<img src="images/csv.png" alt="CSV出力結果" width="500">
+
 ---
 
 ## 🔄 処理フロー
